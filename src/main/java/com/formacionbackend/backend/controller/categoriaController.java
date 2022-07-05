@@ -23,9 +23,8 @@ public class categoriaController {
 	private categoriaService catService;
 	
 	@GetMapping("/categorias")
-	public ResponseEntity<List<Categoria>> get(){
-		ResponseEntity<List<Categoria>> lista =  catService.getAll();
-		return lista;
+	public List<Categoria> get(){
+		return catService.getAll();
 	}
 	
 	@GetMapping("/categorias/{id}")

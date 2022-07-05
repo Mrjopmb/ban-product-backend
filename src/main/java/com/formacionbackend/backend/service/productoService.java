@@ -43,6 +43,7 @@ public class productoService {
 		String value = data.optString("value");
 		switch(field) {
 			case "nombre":
+				System.out.println("SIMON");
 				proTMP = proRepository.findById(id).orElse(null);
 				if(proTMP == null) {
 					return false;

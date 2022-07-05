@@ -17,9 +17,8 @@ public class categoriaService {
 	private categoriaRepository catRepository;
 	
 	//GET (Consultar Todas)
-	public ResponseEntity<List<Categoria>> getAll() {
-		List<Categoria> list = catRepository.findAll();
-		return ResponseEntity.ok(list);
+	public List<Categoria> getAll() {
+		return catRepository.findAll();
 	}
 	
 	//GET (Consultar Una)
